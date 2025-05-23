@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://zpmdynth.gensparkspace.com/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Everstead Solutions</title>
+    <link href="./About Us - Everstead Solutions_files/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./About Us - Everstead Solutions_files/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            position: relative;
+        }
+        
+        .skyscraper-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1514565131-fce0801e5785?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center bottom;
+            background-attachment: fixed;
+        }
+        
+        .value-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #fff;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .footer {
+            background-color: #1a202c;
+        }
+    </style>
+<style>
+    .genspark-notice-dialog {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 10001;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .genspark-notice-content {
+      background-color: white;
+      border-radius: 8px;
+      max-width: 600px;
+      width: 90%;
+      box-sizing: border-box;
+      padding: 10px 30px 30px 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+    }
+
+    .genspark-notice-title {
+      color: #000;
+      font-family: Arial;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%; 
+    }
+
+    .genspark-notice-list {
+      margin: 24px 0;
+      
+      color: #606366;
+      font-family: Arial;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-left: 12px;
+    }
+
+    .genspark-notice-list li {
+      margin-bottom: 12px;
+      list-style-type: disc;
+    }
+
+    .genspark-notice-list li a {
+      color: #606366;
+      text-decoration: underline;
+    }
+
+    .genspark-notice-checkbox {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      gap: 10px;
+
+      color: #232425;
+
+      font-family: Arial;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .genspark-notice-actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+      
+    .genspark-notice-ok {
+      color: #232425;
+
+      text-align: center;
+      font-family: Arial;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%; 
+
+      cursor: pointer;
+      display: flex;
+      height: 40px;
+      padding: 6px 14px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      align-self: stretch;
+      border-radius: 8px;
+      border: 1px solid #000;
+      box-sizing: border-box;
+      width: 100%;
+    }
+  </style></head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-gray-900 fixed w-full z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="https://pskiqbon.gensparkspace.com/" class="text-white font-bold text-3xl">Everstead Solutions</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="https://pskiqbon.gensparkspace.com/" class="text-white hover:text-gray-300 nav-link">Home</a>
+                <a href="https://jinswtto.gensparkspace.com/" class="text-white hover:text-gray-300 nav-link">Services</a>
+                <a href="https://zpmdynth.gensparkspace.com/#" class="text-white hover:text-gray-300 nav-link border-b-2 border-white">About Us</a>
+                <a href="https://lmzqioqd.gensparkspace.com/" class="text-white hover:text-gray-300 nav-link">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-900">
+            <a href="https://pskiqbon.gensparkspace.com/" class="block py-2 px-6 text-white hover:bg-gray-800">Home</a>
+            <a href="https://jinswtto.gensparkspace.com/" class="block py-2 px-6 text-white hover:bg-gray-800">Services</a>
+            <a href="https://zpmdynth.gensparkspace.com/#" class="block py-2 px-6 text-white hover:bg-gray-800 bg-gray-800">About Us</a>
+            <a href="https://lmzqioqd.gensparkspace.com/" class="block py-2 px-6 text-white hover:bg-gray-800">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section flex items-center justify-center">
+        <div class="text-center text-white">
+            <h1 class="text-5xl font-bold mb-4 animate-fade-in" style="animation-delay: 0.2s; opacity: 1;">About Everstead Solutions</h1>
+            <p class="text-xl animate-fade-in" style="animation-delay: 0.5s; opacity: 1;">Your Strategic Partner for Government and Commercial Contract Support</p>
+        </div>
+    </section>
+
+    <!-- Company Overview -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 animate-fade-in" style="animation-delay: 0.7s; opacity: 1;">
+                    <img src="./About Us - Everstead Solutions_files/photo-1454165804606-c3d57bc86b40" alt="Professional meeting" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2 md:pl-12 animate-fade-in" style="animation-delay: 1s; opacity: 1;">
+                    <h2 class="text-4xl font-bold mb-6 text-gray-800">Who We Are</h2>
+                    <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                        Everstead Solutions is a specialized contract support firm dedicated to providing exceptional procurement and contract management services to both government agencies and commercial clients. Founded on principles of integrity, expertise, and client-focused solutions, we bring a fresh perspective to the contracting landscape.
+                    </p>
+                    <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                        Our team consists of dedicated professionals with extensive knowledge in government procurement processes, federal acquisition regulations, and commercial contracting strategies. We understand the complexities and nuances of contracting in both sectors and provide tailored solutions that meet the unique needs of each client.
+                    </p>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        At Everstead Solutions, we pride ourselves on our ability to navigate complex procurement requirements, optimize contract structures, and deliver results that exceed expectations. Our commitment to excellence and attention to detail set us apart in the industry.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission and Vision -->
+    <section class="py-20 skyscraper-bg">
+        <div class="container mx-auto px-6">
+            <div class="bg-white bg-opacity-90 rounded-lg shadow-xl p-12 mx-auto max-w-4xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold mb-2 text-gray-800">Our Mission &amp; Vision</h2>
+                    <div class="w-24 h-1 bg-blue-700 mx-auto"></div>
+                </div>
+                
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Mission Statement</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        To empower organizations by providing expert contract support services that enhance operational efficiency, ensure compliance, and maximize the value of procurement initiatives. We are committed to delivering solutions that address the unique challenges of both government and commercial sectors with uncompromising integrity and excellence.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Vision</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        To be recognized as the premier contract support partner for organizations seeking to optimize their procurement processes, navigate complex regulatory environments, and achieve outstanding results. We aspire to set new standards in the industry through innovation, expertise, and unwavering commitment to client success.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-2 text-gray-800">Our Core Values</h2>
+                <p class="text-xl text-gray-600">The principles that guide everything we do</p>
+                <div class="w-24 h-1 bg-blue-700 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-8 value-card">
+                    <div class="text-blue-700 mb-4">
+                        <i class="fas fa-check-circle text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Integrity</h3>
+                    <p class="text-gray-700">
+                        We conduct all business with unwavering honesty and ethical standards. Our clients trust us because we always do what's right, even when no one is watching.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-8 value-card">
+                    <div class="text-blue-700 mb-4">
+                        <i class="fas fa-lightbulb text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Excellence</h3>
+                    <p class="text-gray-700">
+                        We strive for excellence in every aspect of our work. From the smallest details to the largest projects, we are committed to delivering the highest quality services.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-8 value-card">
+                    <div class="text-blue-700 mb-4">
+                        <i class="fas fa-users text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Client Focus</h3>
+                    <p class="text-gray-700">
+                        Our clients' success is our success. We listen carefully, understand their unique challenges, and develop customized solutions that exceed expectations.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-8 value-card">
+                    <div class="text-blue-700 mb-4">
+                        <i class="fas fa-chart-line text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Innovation</h3>
+                    <p class="text-gray-700">
+                        We embrace creative thinking and continuously seek better ways to serve our clients. We stay ahead of industry trends and adapt to evolving requirements.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Approach -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pr-12 mb-12 md:mb-0 order-2 md:order-1">
+                    <h2 class="text-4xl font-bold mb-6 text-gray-800">Our Approach</h2>
+                    <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                        At Everstead Solutions, we take a collaborative and strategic approach to contract support. We begin by thoroughly understanding each client's unique requirements, organizational structure, and objectives. This allows us to develop tailored solutions that address specific needs rather than offering one-size-fits-all services.
+                    </p>
+                    <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                        We serve both government agencies and commercial organizations, recognizing the distinct requirements of each sector. For government clients, we navigate complex regulatory frameworks, ensure compliance with federal acquisition regulations, and optimize procurement processes within established guidelines. For commercial clients, we focus on developing efficient contract strategies that maximize value, reduce risk, and support business objectives.
+                    </p>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        Our success is measured by the outcomes we achieve for our clients – whether it's streamlined procurement processes, cost savings, enhanced compliance, or strategic contract structuring that provides competitive advantages.
+                    </p>
+                </div>
+                <div class="md:w-1/2 order-1 md:order-2">
+                    <img src="./About Us - Everstead Solutions_files/photo-1600880292089-90a7e086ee0c" alt="Business strategy" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commitment Section -->
+    <section class="py-20 bg-blue-700 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-8">Our Commitment to You</h2>
+            <p class="text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
+                We are committed to being more than just service providers – we strive to be trusted partners in your success. When you work with Everstead Solutions, you gain a dedicated team that is invested in your organization's goals and ready to provide the expertise needed to achieve them.
+            </p>
+            <a href="https://lmzqioqd.gensparkspace.com/" class="inline-block bg-white text-blue-700 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300">Contact Us Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Everstead Solutions</h3>
+                    <p class="mb-4">Your Strategic Partner for Contract Support</p>
+                    <div class="flex space-x-4">
+                        <a href="https://zpmdynth.gensparkspace.com/#" class="text-white hover:text-blue-400"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="https://zpmdynth.gensparkspace.com/#" class="text-white hover:text-blue-400"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="https://zpmdynth.gensparkspace.com/#" class="text-white hover:text-blue-400"><i class="fas fa-envelope text-xl"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Services</h4>
+                    <ul>
+                        <li class="mb-2"><a href="https://jinswtto.gensparkspace.com/#acquisition" class="text-gray-300 hover:text-white">Acquisition Support</a></li>
+                        <li class="mb-2"><a href="https://jinswtto.gensparkspace.com/#contract" class="text-gray-300 hover:text-white">Contract Management</a></li>
+                        <li class="mb-2"><a href="https://jinswtto.gensparkspace.com/#compliance" class="text-gray-300 hover:text-white">Compliance Oversight</a></li>
+                        <li class="mb-2"><a href="https://jinswtto.gensparkspace.com/#cost" class="text-gray-300 hover:text-white">Cost Analysis</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Company</h4>
+                    <ul>
+                        <li class="mb-2"><a href="https://pskiqbon.gensparkspace.com/" class="text-gray-300 hover:text-white">Home</a></li>
+                        <li class="mb-2"><a href="https://zpmdynth.gensparkspace.com/#" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li class="mb-2"><a href="https://zpmdynth.gensparkspace.com/#" class="text-gray-300 hover:text-white">Our Values</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contact</h4>
+                    <ul>
+                        <li class="mb-2 flex items-start">
+                            <i class="fas fa-map-marker-alt mr-2 mt-1"></i>
+                            <span>Washington, D.C. Metro Area</span>
+                        </li>
+                        <li class="mb-2 flex items-start">
+                            <i class="fas fa-phone mr-2 mt-1"></i>
+                            <span>Contact our team</span>
+                        </li>
+                        <li class="mb-2 flex items-start">
+                            <i class="fas fa-envelope mr-2 mt-1"></i>
+                            <span>info@eversteadsolutions.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-10 pt-8 text-center text-gray-400">
+                <p>© 2023 Everstead Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.animate-fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+
+
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDr1SBZ17L8gLYPkAsDcGaA6sew%2BUZYEoC%2BEkO1m1puXULLCQKvp%2BXv4lxVvwMRKzof7kHzx664utsAYqmGT6mW%2FhlpTvSxIdkww6PT1JNJosmKtQay3Mx2bPfCW5zyGbXZo33ws8w0Dwx54xUzK5QN5urlTYVK%2F9tryhTZ6boCNKPvlTWtGjuYUeuQmSnNnniU8Agln%2FKIWdP7c%2F%2BwHSDDVpZ9YL%2F8MsoD6PbFMjcln7cyNqykTMUFRlQ%2BNUyUcwAxAZWNCfsyStsdAL4FaHNNoYTrJdi5c3b%2BX%2FFQ5kYKb6dKplxy7aM5kNtgeY38spRr7xR7H5jzEHnJ2uNiIBZKJrWgWpdO1woy%2Fn8Xxp%2Bdzy32oUZdt8raj%2FBLbK5SnfZChLA7McfkLEqZnLcTFUKPup3wyXpxKPOaI3v5QehkDnLkxf6HeK8d%2B3%2BgPcqEOoHAyELFkbmTt8VP9znEfzXSNAmoTGDD3GwcvJepjQj50SJiRkBmiqTb7LudgsmWBFv%2BhogSW7wddgFDL909Be6RI%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDr1SBZ17L8gLYPkAsDcGaA6sew+UZYEoC+EkO1m1puXULLCQKvp+Xv4lxVvwMRKzof7kHzx664utsAYqmGT6mW/hlpTvSxIdkww6PT1JNJosmKtQay3Mx2bPfCW5zyGbXZo33ws8w0Dwx54xUzK5QN5urlTYVK/9tryhTZ6boCNKPvlTWtGjuYUeuQmSnNnniU8Agln/KIWdP7c/+wHSDDVpZ9YL/8MsoD6PbFMjcln7cyNqykTMUFRlQ+NUyUcwAxAZWNCfsyStsdAL4FaHNNoYTrJdi5c3b+X/FQ5kYKb6dKplxy7aM5kNtgeY38spRr7xR7H5jzEHnJ2uNiIBZKJrWgWpdO1woy/n8Xxp+dzy32oUZdt8raj/BLbK5SnfZChLA7McfkLEqZnLcTFUKPup3wyXpxKPOaI3v5QehkDnLkxf6HeK8d+3+gPcqEOoHAyELFkbmTt8VP9znEfzXSNAmoTGDD3GwcvJepjQj50SJiRkBmiqTb7LudgsmWBFv+hogSW7wddgFDL909Be6RI=";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="./About Us - Everstead Solutions_files/notice_dialog.js.download"></script>
+    </body></html>

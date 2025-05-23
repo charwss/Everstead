@@ -1,0 +1,465 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everstead Solutions - Professional Contract Support Services</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+        body, html {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .parallax {
+            background-attachment: fixed;
+        }
+
+        .section-transition {
+            position: relative;
+            height: 100px;
+            margin-top: -100px;
+            background: linear-gradient(to bottom, transparent, white);
+            z-index: 10;
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .animate-slide-up {
+            animation: slideUp 1.2s ease-out;
+        }
+
+        .animate-slide-in-left {
+            animation: slideInLeft 1.2s ease-out;
+        }
+
+        .animate-slide-in-right {
+            animation: slideInRight 1.2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from { transform: translateX(-100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .service-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .service-icon {
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+        }
+
+        .img-container {
+            overflow: hidden;
+        }
+
+        .zoom-effect {
+            transition: transform 0.5s ease;
+        }
+
+        .zoom-effect:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Navigation Styles */
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #ffffff;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Custom slide indicators */
+        .slide-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .slide-indicator.active {
+            background-color: #ffffff;
+            transform: scale(1.2);
+        }
+        
+        .city-bg {
+            background-image: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2l0eXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* Team image with diverse professionals */
+        .team-image {
+            background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1976&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-transparent z-50 transition-all duration-500" id="mainNav">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div>
+                    <a href="#" class="text-white text-2xl font-bold">EVERSTEAD SOLUTIONS</a>
+                </div>
+                <div class="hidden md:flex">
+                    <ul class="flex space-x-8">
+                        <li><a href="#" class="text-white font-medium nav-link">HOME</a></li>
+                        <li><a href="services.html" class="text-white font-medium nav-link">SERVICES</a></li>
+                        <li><a href="about.html" class="text-white font-medium nav-link">ABOUT</a></li>
+                        <li><a href="contact.html" class="text-white font-medium nav-link">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section flex items-center parallax">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl animate-fade-in">
+                <h1 class="text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                    DELIVERING EXCELLENCE AT THE SPEED OF YOUR MISSION
+                </h1>
+                <p class="text-white text-xl mb-8">
+                    Supporting government and commercial clients with comprehensive contract solutions.
+                </p>
+                <a href="#services" class="bg-white text-blue-900 py-3 px-8 rounded-md font-semibold hover:bg-blue-100 transition duration-300">
+                    Explore Our Services
+                </a>
+            </div>
+        </div>
+        
+        <!-- Slide Indicators -->
+        <div class="absolute right-10 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4">
+            <div class="slide-indicator active"></div>
+            <div class="slide-indicator"></div>
+            <div class="slide-indicator"></div>
+            <div class="slide-indicator"></div>
+            <div class="slide-indicator"></div>
+            <div class="slide-indicator"></div>
+            <div class="slide-indicator"></div>
+            <div class="slide-indicator"></div>
+            <div class="slide-indicator"></div>
+            <div class="slide-indicator"></div>
+        </div>
+    </section>
+
+    <div class="section-transition"></div>
+
+    <!-- Introduction Section -->
+    <section class="py-16 bg-white" id="intro">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 animate-slide-in-left">
+                    <div class="team-image h-96 w-full rounded-lg shadow-xl"></div>
+                </div>
+                <div class="md:w-1/2 md:pl-12 animate-slide-in-right">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">WHO WE ARE</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Everstead Solutions is a premier provider of contract support services, dedicated to helping government and commercial organizations navigate complex procurement processes with precision and expertise.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        We understand the challenges in today's competitive landscape and provide tailored solutions to ensure your procurement needs are met efficiently and effectively.
+                    </p>
+                    <a href="about.html" class="inline-block bg-blue-900 text-white py-3 px-8 rounded-md font-semibold hover:bg-blue-800 transition duration-300">
+                        Learn More About Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- City Background Section -->
+    <section class="city-bg py-24 parallax">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center text-white">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 animate-slide-up">COMMITTED TO YOUR SUCCESS</h2>
+                <p class="text-xl leading-relaxed animate-fade-in">
+                    We take pride in delivering reliable, innovative, and compliant solutions that drive success for our clients. Our expertise and dedication ensure that you have the support you need, when you need it most.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview Section -->
+    <section class="py-16 bg-white" id="services">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">OUR SERVICES</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Comprehensive contract support services tailored to meet your specific needs and requirements.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service Card 1 -->
+                <a href="services.html#acquisition-support" class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="img-container h-48">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGFjcXVpc2l0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Acquisition Support" class="w-full h-full object-cover zoom-effect">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-center mb-4">
+                            <div class="service-icon bg-blue-100 p-3 rounded-full">
+                                <i class="fas fa-handshake text-blue-900 text-xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-center text-gray-800 mb-2">Acquisition Support</h3>
+                        <p class="text-gray-600 text-center">
+                            Comprehensive assistance throughout the acquisition lifecycle.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Service Card 2 -->
+                <a href="services.html#contract-management" class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="img-container h-48">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29udHJhY3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Contract Management" class="w-full h-full object-cover zoom-effect">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-center mb-4">
+                            <div class="service-icon bg-blue-100 p-3 rounded-full">
+                                <i class="fas fa-file-contract text-blue-900 text-xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-center text-gray-800 mb-2">Contract Management</h3>
+                        <p class="text-gray-600 text-center">
+                            End-to-end management of your contract portfolio.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Service Card 3 -->
+                <a href="services.html#compliance-oversight" class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="img-container h-48">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29tcGxpYW5jZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Compliance Oversight" class="w-full h-full object-cover zoom-effect">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-center mb-4">
+                            <div class="service-icon bg-blue-100 p-3 rounded-full">
+                                <i class="fas fa-shield-alt text-blue-900 text-xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-center text-gray-800 mb-2">Compliance Oversight</h3>
+                        <p class="text-gray-600 text-center">
+                            Ensuring adherence to regulations and requirements.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Service Card 4 -->
+                <a href="services.html#cost-analysis" class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="img-container h-48">
+                        <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW5hbHlzaXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Cost Analysis" class="w-full h-full object-cover zoom-effect">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-center mb-4">
+                            <div class="service-icon bg-blue-100 p-3 rounded-full">
+                                <i class="fas fa-chart-line text-blue-900 text-xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-center text-gray-800 mb-2">Cost Analysis</h3>
+                        <p class="text-gray-600 text-center">
+                            Detailed evaluation of costs to optimize budgeting.
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="services.html" class="inline-block bg-blue-900 text-white py-3 px-8 rounded-md font-semibold hover:bg-blue-800 transition duration-300">
+                    View All Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-blue-900">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-white mb-8 animate-fade-in">READY TO ELEVATE YOUR CONTRACT MANAGEMENT?</h2>
+                <p class="text-xl text-blue-100 mb-8 animate-slide-up">
+                    Contact us today to discover how Everstead Solutions can help streamline your procurement processes and drive success.
+                </p>
+                <a href="contact.html" class="inline-block bg-white text-blue-900 py-3 px-8 rounded-md font-semibold hover:bg-blue-100 transition duration-300">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Everstead Solutions</h3>
+                    <p class="text-gray-400">
+                        Delivering excellence in contract support services for government and commercial clients.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#acquisition-support" class="text-gray-400 hover:text-white transition">Acquisition Support</a></li>
+                        <li><a href="services.html#contract-management" class="text-gray-400 hover:text-white transition">Contract Management</a></li>
+                        <li><a href="services.html#compliance-oversight" class="text-gray-400 hover:text-white transition">Compliance Oversight</a></li>
+                        <li><a href="services.html#cost-analysis" class="text-gray-400 hover:text-white transition">Cost Analysis</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="about.html#mission" class="text-gray-400 hover:text-white transition">Mission & Vision</a></li>
+                        <li><a href="about.html#values" class="text-gray-400 hover:text-white transition">Core Values</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1.5 mr-3 text-blue-400"></i>
+                            <span class="text-gray-400"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5b32353d341b3e2d3e29282f3e3a3f2834372e2f3234352875383436">[email&#160;protected]</a></span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mt-1.5 mr-3 text-blue-400"></i>
+                            <span class="text-gray-400">(555) 123-4567</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1.5 mr-3 text-blue-400"></i>
+                            <span class="text-gray-400">1234 Business Ave, Suite 500<br>Washington, DC 20001</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm">© 2023 Everstead Solutions. All Rights Reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Navigation background change on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-gray-900');
+                nav.classList.remove('bg-transparent');
+            } else {
+                nav.classList.remove('bg-gray-900');
+                nav.classList.add('bg-transparent');
+            }
+        });
+
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animation on scroll
+        const animatedElements = document.querySelectorAll('.animate-fade-in, .animate-slide-up, .animate-slide-in-left, .animate-slide-in-right');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = entry.target.classList.contains('animate-fade-in') ? 'fadeIn 1.5s forwards' :
+                                                entry.target.classList.contains('animate-slide-up') ? 'slideUp 1.2s forwards' :
+                                                entry.target.classList.contains('animate-slide-in-left') ? 'slideInLeft 1.2s forwards' :
+                                                'slideInRight 1.2s forwards';
+                } else {
+                    entry.target.style.animation = 'none';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        animatedElements.forEach(element => {
+            observer.observe(element);
+            element.style.opacity = '0';
+        });
+    </script>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDtQpJrqnN%2FKxwl%2BDTb%2BslT2fcQjRRY%2FfE0aJjCLOX8615RoySlpw86zqJ%2BrX25ZgWLWe%2BuI1Q%2B%2B0H%2BEHth19DNvE1ySYbpqrYCO8%2F6uTZLI3I9GBc1om9RYZQIQ29V8kPg3Gjl6QfaTaYi62evRamNTHPJWqVCo128%2FLTSZG0UZzJmdNNQeHQkJCTWeLUdnhdz7Cq%2B3w1hC0MRIMhsJBPC9b%2F9iKopD9vnAioEHDuMkGLi6vNUQMkUJRPlGln35d7RAydcJuUrWlb7WvaalybYuiNxg0TepYx6KLV25LtNq1%2BVO5gZqAIBb6kTY2g31FUUXW7x5SW98ButrJAK84UsmgcfclkvPagFLd3ZVQcKzCY267OuqD9QaJsYs9rI3KJ9lxM0tUDBA5C2dZTVAgdt%2BgZS3TOiLn8xkcx6eq5P%2BmRh9VDEhJGj%2FgpoUOK%2FO0wCskueEN5mbCS8d7%2FLYqYi7bbxQKN7yqU4bnWdz3%2Bx2a6Z8X0b9icvx15gif3hXPvk3nfGYRrP%2BWq4TEi8XKmM4%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDtQpJrqnN/Kxwl+DTb+slT2fcQjRRY/fE0aJjCLOX8615RoySlpw86zqJ+rX25ZgWLWe+uI1Q++0H+EHth19DNvE1ySYbpqrYCO8/6uTZLI3I9GBc1om9RYZQIQ29V8kPg3Gjl6QfaTaYi62evRamNTHPJWqVCo128/LTSZG0UZzJmdNNQeHQkJCTWeLUdnhdz7Cq+3w1hC0MRIMhsJBPC9b/9iKopD9vnAioEHDuMkGLi6vNUQMkUJRPlGln35d7RAydcJuUrWlb7WvaalybYuiNxg0TepYx6KLV25LtNq1+VO5gZqAIBb6kTY2g31FUUXW7x5SW98ButrJAK84UsmgcfclkvPagFLd3ZVQcKzCY267OuqD9QaJsYs9rI3KJ9lxM0tUDBA5C2dZTVAgdt+gZS3TOiLn8xkcx6eq5P+mRh9VDEhJGj/gpoUOK/O0wCskueEN5mbCS8d7/LYqYi7bbxQKN7yqU4bnWdz3+x2a6Z8X0b9icvx15gif3hXPvk3nfGYRrP+Wq4TEi8XKmM4=";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    
